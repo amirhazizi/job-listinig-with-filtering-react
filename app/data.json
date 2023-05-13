@@ -1,130 +1,130 @@
 [
   {
+    "uploadTime": 1683892380073,
     "type": "Photosnap",
-    "new": true,
     "featured": true,
     "title": "Senior Frontend Developer",
-    "uploadTime": "1d ago",
     "timeType": "Full Time",
     "location": "USA only",
     "role": "Frontend",
     "level": "Senior",
-    "language": ["HTML", "CSS", "JavaScript"]
+    "language": ["HTML", "CSS", "JavaScript"],
+    "imageUrl": "./images/photosnap.svg"
   },
   {
+    "uploadTime": 1683872350073,
     "type": "Manage",
-    "new": true,
     "featured": true,
     "title": "Fullstack Developer",
-    "uploadTime": "1d ago",
     "timeType": "Part Time",
     "location": "Remote",
     "role": "Fullstack",
     "level": "Midweight",
     "language": ["Python"],
-    "tools": ["React"]
+    "tools": ["React"],
+    "imageUrl": "./images/manage.svg"
   },
   {
+    "uploadTime": 1683785950073,
     "type": "Account",
-    "new": true,
     "featured": false,
     "title": "Junior Frontend Developer",
-    "uploadTime": "2d ago",
     "timeType": "Part Time",
     "location": "USA only",
     "role": "Frontend",
     "level": "Junior",
     "language": ["JavaScript"],
-    "tools": ["React", "Sass"]
+    "tools": ["React", "Sass"],
+    "imageUrl": "./images/account.svg"
   },
   {
+    "uploadTime": 1683526600003,
     "type": "MyHome",
-    "new": false,
     "featured": false,
     "title": "Junior Frontend Developer",
-    "uploadTime": "5d ago",
     "timeType": "Contract",
     "location": "USA only",
     "role": "Frontend",
     "level": "Junior",
-    "language": ["CSS", "JavaScript"]
+    "language": ["CSS", "JavaScript"],
+    "imageUrl": "./images/myhome.svg"
   },
   {
+    "uploadTime": 1683370980073,
     "type": "Loop Studios",
-    "new": false,
     "featured": false,
     "title": "Software Engineer",
-    "uploadTime": "1w ago",
     "timeType": "Full Time",
     "location": "Worldwide",
     "role": "Fullstack",
     "level": "Midweight",
     "language": ["JavaScript", "Ruby"],
-    "tools": ["Sass"]
+    "tools": ["Sass"],
+    "imageUrl": "./images/loop-studio.svg"
   },
   {
+    "uploadTime": 1682769180073,
     "type": "FaceIt",
-    "new": false,
     "featured": false,
     "title": "Junior Backend Developer",
-    "uploadTime": "2w ago",
     "timeType": "Full Time",
     "location": "UK only",
     "role": "Backend",
     "level": "Junior",
     "language": ["Ruby"],
-    "tools": ["RoR"]
+    "tools": ["RoR"],
+    "imageUrl": "./images/faceit.svg"
   },
   {
+    "uploadTime": 1682767180073,
     "type": "Shortly",
-    "new": false,
     "featured": false,
     "title": "Junior Developer",
-    "uploadTime": "2w ago",
     "timeType": "Full Time",
     "location": "Worldwide",
     "role": "Backend",
     "level": "Junior",
     "language": ["HTML", "JavaScript"],
-    "tools": ["Sass"]
+    "tools": ["Sass"],
+    "imageUrl": "./images/shortly.svg"
   },
   {
+    "uploadTime": 1682765130073,
     "type": "Insure",
-    "new": false,
     "featured": false,
     "title": "Junior Frontend Developer",
-    "uploadTime": "2w ago",
     "timeType": "Full Time",
     "location": "USA only",
     "role": "Frontend",
     "level": "Junior",
     "language": ["JavaScript"],
-    "tools": ["Vue", "Sass"]
+    "tools": ["Vue", "Sass"],
+    "imageUrl": "./images/insure.svg"
   },
   {
+    "uploadTime": 1682164380073,
     "type": "Eyecam Co.",
-    "new": false,
     "featured": false,
     "title": "Full Stack Engineer",
-    "uploadTime": "3w ago",
     "timeType": "Full Time",
     "location": "Worldwide",
     "role": "Fullstack",
     "level": "Midweight",
     "language": ["JavaScript", "Python"],
-    "tools": ["Django"]
+    "tools": ["Django"],
+    "imageUrl": "./images/eyecam-co.svg"
   },
   {
+    "uploadTime": 1665834780073,
     "type": "The Air Filter Company",
-    "new": false,
     "featured": false,
     "title": "Front-end Dev",
-    "uploadTime": "1mo ago",
     "timeType": "Part Time",
     "location": "Worldwide",
     "role": "Frontend",
     "level": "Junior",
     "language": ["JavaScript"],
-    "tools": ["React", "Sass"]
+    "tools": ["React", "Sass"],
+    "imageUrl": "./images/the-air-filter-company.svg"
   }
 ]
