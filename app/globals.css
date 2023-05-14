@@ -19,3 +19,7 @@
 body {
   font-size: 15px;
 }
+
+main {
+  background: var(--cl-Light-Grayish-Cyan);
+}

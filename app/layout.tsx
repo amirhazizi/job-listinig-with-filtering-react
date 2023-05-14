@@ -1,10 +1,10 @@
 import "./globals.css"
 import { League_Spartan } from "next/font/google"
 
-const leagueSpartan = League_Spartan({
-  weight: ["500", "700"],
-  subsets: ["latin"],
-})
+// const leagueSpartan = League_Spartan({
+//   weight: ["500", "700"],
+//   subsets: ["latin"],
+// })
 
 export const metadata = {
   title: "Frontend Mentor | Job Listings",
@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={leagueSpartan.className}>{children}</body>
+      <body>{children}</body>
     </html>
   )
 }
