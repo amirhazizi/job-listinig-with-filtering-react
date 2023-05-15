@@ -23,3 +23,20 @@ body {
 main {
   background: var(--cl-Light-Grayish-Cyan);
 }
+
+main>div {
+  width: min(90%, 1000px);
+}
+
+.MuiButton-root {
+  background-color: var(--cl-Light-Grayish-Cyan-2);
+}
+
+.MuiCard-root {
+  box-shadow: 0 .2rem 1rem rgba(48, 61, 39, 0.152);
+}
+
+.remove-btn {
+  background: var(--cl-Desaturated-Dark-Cyan);
+  padding: 0 .65rem;
+}
