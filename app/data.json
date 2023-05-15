@@ -1,6 +1,6 @@
 [
   {
-    "uploadTime": 1683892380073,
+    "uploadTime": 1684065180073,
     "type": "Photosnap",
     "featured": true,
     "title": "Senior Frontend Developer",
@@ -12,7 +12,7 @@
     "imageUrl": "./images/photosnap.svg"
   },
   {
-    "uploadTime": 1683872350073,
+    "uploadTime": 1684045150073,
     "type": "Manage",
     "featured": true,
     "title": "Fullstack Developer",
@@ -25,7 +25,7 @@
     "imageUrl": "./images/manage.svg"
   },
   {
-    "uploadTime": 1683785950073,
+    "uploadTime": 1683958750073,
     "type": "Account",
     "featured": false,
     "title": "Junior Frontend Developer",
@@ -38,7 +38,7 @@
     "imageUrl": "./images/account.svg"
   },
   {
-    "uploadTime": 1683526600003,
+    "uploadTime": 1683699400003,
     "type": "MyHome",
     "featured": false,
     "title": "Junior Frontend Developer",
@@ -60,7 +60,7 @@
     "level": "Midweight",
     "language": ["JavaScript", "Ruby"],
     "tools": ["Sass"],
-    "imageUrl": "./images/loop-studio.svg"
+    "imageUrl": "./images/loop-studios.svg"
   },
   {
     "uploadTime": 1682769180073,
