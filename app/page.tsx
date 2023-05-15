@@ -1,14 +1,20 @@
 "use client"
-import { ThemeProvider, Typography, Box, Button, Card } from "@mui/material"
 import { useReducer } from "react"
-import theme from "./theme"
 import Image from "next/image"
+
+import { ThemeProvider, Typography, Box, Button, Card } from "@mui/material"
+import theme from "./theme"
+
 import bgImageMobile from "../public/images/bg-header-mobile.svg"
 import bgImageDesktop from "../public/images/bg-header-desktop.svg"
 import removeSVG from "../public/images/icon-remove.svg"
+
 import calculateTime from "./calculateTime"
+
+import { ADD_FILTER, REMOVE_FILTER, CLEAR_FILTER } from "./actions"
 import reducer from "./reducer"
 import data from "./data.json"
+
 interface CardProps {
   uploadTime: number
   type: string
@@ -99,6 +105,7 @@ export default function Home() {
                 })}
               </Box>
               <Button
+                onClick={() => dispatch({ type: CLEAR_FILTER })}
                 style={{ backgroundColor: "transparent" }}
                 sx={{
                   color: "grey",
@@ -267,6 +274,9 @@ export default function Home() {
                     }}
                   >
                     <Button
+                      onClick={() => {
+                        dispatch({ type: ADD_FILTER, payload: role })
+                      }}
                       sx={{
                         color: "primary.main",
                         fontWeight: 700,
@@ -278,6 +288,9 @@ export default function Home() {
                       {role}
                     </Button>
                     <Button
+                      onClick={() => {
+                        dispatch({ type: ADD_FILTER, payload: level })
+                      }}
                       sx={{
                         color: "primary.main",
                         fontWeight: 700,
@@ -292,6 +305,9 @@ export default function Home() {
                     {language.map((lan, index) => {
                       return (
                         <Button
+                          onClick={() => {
+                            dispatch({ type: ADD_FILTER, payload: lan })
+                          }}
                           key={index}
                           sx={{
                             color: "primary.main",
@@ -309,6 +325,9 @@ export default function Home() {
                       return (
                         <Button
                           key={index}
+                          onClick={() => {
+                            dispatch({ type: ADD_FILTER, payload: tool })
+                          }}
                           sx={{
                             color: "primary.main",
                             fontWeight: 700,
