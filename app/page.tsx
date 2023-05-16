@@ -93,7 +93,12 @@ export default function Home() {
                       >
                         {filter}
                       </Typography>
-                      <button className='remove-btn self-stretch rounded-r-lg'>
+                      <button
+                        onClick={() =>
+                          dispatch({ type: REMOVE_FILTER, payload: filter })
+                        }
+                        className='remove-btn self-stretch rounded-r-lg'
+                      >
                         <Image
                           className='scale-125'
                           src={removeSVG}
