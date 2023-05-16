@@ -151,13 +151,14 @@ export default function Home() {
                       width: "fit-content",
                       display: "flex",
                       alignItems: "center",
-                      borderRadius: 2,
+                      borderRadius: 1.5,
                     }}
                   >
                     <Typography
                       sx={{
                         p: 1,
-                        py: 0.8,
+                        py: 0.6,
+                        pb: 0.4,
                         fontWeight: 700,
                         color: "primary.main",
                       }}
@@ -188,6 +189,11 @@ export default function Home() {
                 fontWeight: 700,
                 textTransform: "unset",
                 alignSelf: "stretch",
+                transition: "all 250ms",
+                ":hover": {
+                  textDecoration: "underline",
+                  color: "primary.main",
+                },
               }}
             >
               Clear
@@ -284,6 +290,9 @@ export default function Home() {
                       sx={{
                         fontSize: ".9rem",
                         fontWeight: 900,
+                        cursor: "pointer",
+                        transition: "all 250ms",
+                        ":hover": { color: "primary.main" },
                         [theme.breakpoints.up("md")]: {
                           fontSize: "1.1rem",
                         },
@@ -355,6 +364,8 @@ export default function Home() {
                         textTransform: "unset",
                         p: 1,
                         py: 0.5,
+                        transition: "all 250ms",
+                        ":hover": { color: "white", bgcolor: "primary.main" },
                       }}
                     >
                       {role}
@@ -369,6 +380,8 @@ export default function Home() {
                         textTransform: "unset",
                         p: 1,
                         py: 0.5,
+                        transition: "all 250ms",
+                        ":hover": { color: "white", bgcolor: "primary.main" },
                       }}
                     >
                       {level}
@@ -387,6 +400,11 @@ export default function Home() {
                             textTransform: "unset",
                             p: 1,
                             py: 0.5,
+                            transition: "all 250ms",
+                            ":hover": {
+                              color: "white",
+                              bgcolor: "primary.main",
+                            },
                           }}
                         >
                           {lan}
@@ -406,6 +424,11 @@ export default function Home() {
                             textTransform: "unset",
                             p: 1,
                             py: 0.5,
+                            transition: "all 250ms",
+                            ":hover": {
+                              color: "white",
+                              bgcolor: "primary.main",
+                            },
                           }}
                         >
                           {tool}

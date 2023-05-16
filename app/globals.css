@@ -49,5 +49,10 @@ main>div {
 
 .remove-btn {
   background: var(--cl-Desaturated-Dark-Cyan);
-  padding: 0 .65rem;
+  padding: 0 .5rem;
+  transition: all 250ms;
+}
+
+.remove-btn:hover {
+  background: var(--cl-Very-Dark-Grayish-Cyan);
 }
