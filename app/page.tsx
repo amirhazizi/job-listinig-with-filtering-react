@@ -1,5 +1,5 @@
 "use client"
-import { useReducer } from "react"
+import { useReducer, useRef } from "react"
 import Image from "next/image"
 
 import { ThemeProvider, Typography, Box, Button, Card } from "@mui/material"
@@ -15,6 +15,7 @@ import { ADD_FILTER, REMOVE_FILTER, CLEAR_FILTER } from "./actions"
 import reducer from "./reducer"
 import data from "./data.json"
 
+import { useAutoAnimate } from "@formkit/auto-animate/react"
 interface CardProps {
   uploadTime: number
   type: string
@@ -31,6 +32,7 @@ interface CardProps {
 const initialState = { data, filters: [] }
 export default function Home() {
   const [state, dispatch] = useReducer(reducer, initialState)
+  const [parent] = useAutoAnimate()
   return (
     <ThemeProvider theme={theme}>
       <main className='min-h-screen relative'>
@@ -123,7 +125,7 @@ export default function Home() {
               </Button>
             </Card>
           )}
-          <Box sx={{ pt: 10, display: "grid", gap: 7 }}>
+          <Box ref={parent} sx={{ pt: 10, display: "grid", gap: 7 }}>
             {state.data.map((card: CardProps) => {
               const {
                 uploadTime,

@@ -3,21 +3,19 @@ import { ADD_FILTER, REMOVE_FILTER, CLEAR_FILTER } from "./actions"
 import initialData from "./data.json"
 
 type StatePrpos = {
-  data: [
-    {
-      uploadTime: number
-      type: string
-      featured: boolean
-      title: string
-      timeType: string
-      location: string
-      role: string
-      level: string
-      language: string[]
-      imageUrl: string
-      tools?: string[]
-    }
-  ]
+  data: {
+    uploadTime: number
+    type: string
+    featured: boolean
+    title: string
+    timeType: string
+    location: string
+    role: string
+    level: string
+    language: string[]
+    imageUrl: string
+    tools?: string[]
+  }[]
   filters: string[]
 }
 const addfilter = (preData: StatePrpos["data"], filterType: string = "") => {
@@ -40,8 +38,11 @@ export default function reducer(
 ) {
   const { data, filters } = state
   if (action.type === ADD_FILTER) {
-    const newDate = addfilter(data, action.payload)
-    return { data: newDate, filters: [...filters, action.payload] }
+    if (!filters.includes(action.payload)) {
+      const newDate = addfilter(data, action.payload)
+      return { data: newDate, filters: [...filters, action.payload] }
+    }
+    return state
   }
   if (action.type === REMOVE_FILTER) {
     const newFilters = filters.filter(
@@ -49,9 +50,9 @@ export default function reducer(
     )
     let newData = initialData
     if (newFilters.length > 0) {
-      newFilters.forEach((filter: string) => {
+      for (let filter of filters) {
         newData = addfilter(newData, filter)
-      })
+      }
     }
     return { data: newData, filters: newFilters }
   }
