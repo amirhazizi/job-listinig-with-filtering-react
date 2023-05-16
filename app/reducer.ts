@@ -14,7 +14,7 @@ type StatePrpos = {
     level: string
     language: string[]
     imageUrl: string
-    tools?: string[]
+    tools?: string[] | undefined
   }[]
   filters: string[]
 }
@@ -38,7 +38,7 @@ export default function reducer(
 ) {
   const { data, filters } = state
   if (action.type === ADD_FILTER) {
-    if (!filters.includes(action.payload)) {
+    if (!filters.includes(action.payload || "")) {
       const newDate = addfilter(data, action.payload)
       return { data: newDate, filters: [...filters, action.payload] }
     }
@@ -50,7 +50,7 @@ export default function reducer(
     )
     let newData = initialData
     if (newFilters.length > 0) {
-      for (let filter of filters) {
+      for (let filter of newFilters) {
         newData = addfilter(newData, filter)
       }
     }

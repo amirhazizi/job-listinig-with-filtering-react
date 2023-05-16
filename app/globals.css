@@ -15,9 +15,20 @@
   --cl-Very-Dark-Grayish-Cyan: hsl(180, 14%, 20%);
 }
 
+/* custopm scrollbar */
+::-webkit-scrollbar {
+  background: var(--cl-Light-Grayish-Cyan);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--cl-Desaturated-Dark-Cyan);
+  border-radius: 50rem;
+  border: 5px solid var(--cl-Light-Grayish-Cyan);
+}
 
 body {
   font-size: 15px;
+  scroll-behavior: smooth;
 }
 
 main {

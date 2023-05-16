@@ -7,7 +7,15 @@ module.exports = {
     "./src/**/*.{html,js}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      // Screen sizes
+      screens: {
+        sm: "480px",
+        md: "768px",
+        lg: "976px",
+        lx: "1440px",
+      },
+    },
   },
   plugins: [],
 }
