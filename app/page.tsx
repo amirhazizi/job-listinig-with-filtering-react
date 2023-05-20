@@ -14,7 +14,7 @@ import calculateTime from "./calculateTime"
 import { ADD_FILTER, REMOVE_FILTER, CLEAR_FILTER } from "./actions"
 import reducer from "./reducer"
 import data from "./data.json"
-
+import Head from "next/head"
 import { useAutoAnimate } from "@formkit/auto-animate/react"
 const newCard = {
   ":after": {
