@@ -1,5 +1,13 @@
-import { ThemeProvider, Typography, Box, Button, Card } from "@mui/material"
+import { Typography, Box, Button, Card } from "@mui/material"
 import theme from "../theme"
+import { newCard, cardStyle } from "../globalStyle"
+
+import Image from "next/image"
+import calculateTime from "../calculateTime"
+
+import { ADD_FILTER } from "../actions"
+import { connect } from "react-redux"
+
 type SingleCardProps = {
   card: {
     uploadTime: number
@@ -14,8 +22,9 @@ type SingleCardProps = {
     tools?: string[] | undefined
     imageUrl: string
   }
+  addFilter: Function
 }
-export default function SingleCard({ card }: SingleCardProps) {
+function SingleCard({ card, addFilter }: SingleCardProps) {
   const {
     uploadTime,
     type,
@@ -166,7 +175,7 @@ export default function SingleCard({ card }: SingleCardProps) {
       >
         <Button
           onClick={() => {
-            dispatch({ type: ADD_FILTER, payload: role })
+            addFilter(role)
           }}
           sx={{
             color: "primary.main",
@@ -182,7 +191,7 @@ export default function SingleCard({ card }: SingleCardProps) {
         </Button>
         <Button
           onClick={() => {
-            dispatch({ type: ADD_FILTER, payload: level })
+            addFilter(level)
           }}
           sx={{
             color: "primary.main",
@@ -201,7 +210,7 @@ export default function SingleCard({ card }: SingleCardProps) {
           return (
             <Button
               onClick={() => {
-                dispatch({ type: ADD_FILTER, payload: lan })
+                addFilter(lan)
               }}
               key={index}
               sx={{
@@ -226,7 +235,7 @@ export default function SingleCard({ card }: SingleCardProps) {
             <Button
               key={index}
               onClick={() => {
-                dispatch({ type: ADD_FILTER, payload: tool })
+                addFilter(tool)
               }}
               sx={{
                 color: "primary.main",
@@ -249,3 +258,10 @@ export default function SingleCard({ card }: SingleCardProps) {
     </Card>
   )
 }
+const mapDispatchToProps = (dispatch: Function) => {
+  return {
+    addFilter: (filterContent: string) =>
+      dispatch({ type: ADD_FILTER, payload: filterContent }),
+  }
+}
+export default connect(null, mapDispatchToProps)(SingleCard)

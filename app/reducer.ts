@@ -1,4 +1,3 @@
-import { log } from "console"
 import { ADD_FILTER, REMOVE_FILTER, CLEAR_FILTER } from "./actions"
 import initialData from "./data.json"
 
@@ -18,6 +17,7 @@ type StatePrpos = {
   }[]
   filters: string[]
 }
+
 const addfilter = (preData: StatePrpos["data"], filterType: string = "") => {
   const newData = preData.reduce((total: any, card: any) => {
     if (card.role === filterType) return [...total, card]
@@ -43,8 +43,7 @@ export default function reducer(
       return { data: newDate, filters: [...filters, action.payload] }
     }
     return state
-  }
-  if (action.type === REMOVE_FILTER) {
+  } else if (action.type === REMOVE_FILTER) {
     const newFilters = filters.filter(
       (filter: string) => filter !== action.payload
     )
@@ -55,9 +54,9 @@ export default function reducer(
       }
     }
     return { data: newData, filters: newFilters }
-  }
-  if (action.type === CLEAR_FILTER) {
+  } else if (action.type === CLEAR_FILTER) {
     return { data: initialData, filters: [] }
+  } else {
+    return state
   }
-  return state
 }
